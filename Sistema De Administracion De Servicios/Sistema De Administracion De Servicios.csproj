@@ -1,0 +1,804 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{69904DA4-3439-4652-A45C-88822F3EA417}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sistema_De_Administracion_De_Servicios</RootNamespace>
+    <AssemblyName>Sistema De Administracion De Servicios</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=10.4.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="EmbeddedResource">
+      <HintPath>..\..\EmbeddedResource\EmbeddedResource\bin\Debug\EmbeddedResource.dll</HintPath>
+    </Reference>
+    <Reference Include="ExpressionValidator">
+      <HintPath>..\..\DLL\ExpressionValidator.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Outlook, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Actividades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Actividades.designer.cs">
+      <DependentUpon>Actividades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarUsuario.designer.cs">
+      <DependentUpon>AgregarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Agrupaciones.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Agrupaciones.designer.cs">
+      <DependentUpon>Agrupaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CADINDataSet.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CADINDataSet.designer.cs">
+      <DependentUpon>CADINDataSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Caso.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Caso.designer.cs">
+      <DependentUpon>Caso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos-View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos-View.designer.cs">
+      <DependentUpon>Casos-View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control Reportes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control Reportes.designer.cs">
+      <DependentUpon>Control Reportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlCambiarFuncionarioAsignado.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlCambiarFuncionarioAsignado.designer.cs">
+      <DependentUpon>ControlCambiarFuncionarioAsignado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlFiltroBusqueda.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlFiltroBusqueda.designer.cs">
+      <DependentUpon>ControlFiltroBusqueda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlMensaje.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlMensaje.designer.cs">
+      <DependentUpon>ControlMensaje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlMensajes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlMensajes.designer.cs">
+      <DependentUpon>ControlMensajes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlUsuario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlUsuario.designer.cs">
+      <DependentUpon>ControlUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Departamentos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Departamentos.designer.cs">
+      <DependentUpon>Departamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Empresa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Empresa.designer.cs">
+      <DependentUpon>Empresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpresaDataSet.cs">
+      <DependentUpon>EmpresaDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EmpresaDataSet.designer.cs">
+      <DependentUpon>EmpresaDataSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Empresas-View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empresas-View.designer.cs">
+      <DependentUpon>Empresas-View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EncryptPassphraseAlgorithm.cs" />
+    <Compile Include="Entorno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entorno.designer.cs">
+      <DependentUpon>Entorno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBusqueda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBusqueda.designer.cs">
+      <DependentUpon>FormBusqueda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormularioComunicacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioComunicacion.designer.cs">
+      <DependentUpon>FormularioComunicacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormularioFiltroBusqueda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioReportes.designer.cs">
+      <DependentUpon>FormularioReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormularioSeleccionDestinatarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioSeleccionDestinatarios.designer.cs">
+      <DependentUpon>FormularioSeleccionDestinatarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUsuario.designer.cs">
+      <DependentUpon>FormUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Funciones.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu-Principal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Menu-Principal.designer.cs">
+      <DependentUpon>Menu-Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutlookEmailSender.cs" />
+    <Compile Include="OutlookEmailSender2.cs" />
+    <Compile Include="Pagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pagos.designer.cs">
+      <DependentUpon>Pagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallaGerencial.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PantallaGerencial.designer.cs">
+      <DependentUpon>PantallaGerencial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RealizarPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RealizarPago.designer.cs">
+      <DependentUpon>RealizarPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes.cs" />
+    <Compile Include="ReportesDataSet.cs">
+      <DependentUpon>ReportesDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportesDataSet.designer.cs">
+      <DependentUpon>ReportesDataSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sectores.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sectores.designer.cs">
+      <DependentUpon>Sectores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Solicitud_Apoyo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Solicitud_Apoyo.designer.cs">
+      <DependentUpon>Solicitud_Apoyo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TipoActividad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TipoActividad.designer.cs">
+      <DependentUpon>TipoActividad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tipo_Empresa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tipo_Empresa.designer.cs">
+      <DependentUpon>Tipo_Empresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tipo_Membresia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tipo_Membresia.designer.cs">
+      <DependentUpon>Tipo_Membresia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tipo_Tarifa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tipo_Tarifa.designer.cs">
+      <DependentUpon>Tipo_Tarifa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario.cs" />
+    <Compile Include="UsuarioPerfil.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UsuarioPerfil.designer.cs">
+      <DependentUpon>UsuarioPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsuariosDataSet.cs">
+      <DependentUpon>UsuariosDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UsuariosDataSet.designer.cs">
+      <DependentUpon>UsuariosDataSet.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Actividades.resx">
+      <DependentUpon>Actividades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarUsuario.resx">
+      <DependentUpon>AgregarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Agrupaciones.resx">
+      <DependentUpon>Agrupaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Caso.resx">
+      <DependentUpon>Caso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos-View.resx">
+      <DependentUpon>Casos-View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control Reportes.resx">
+      <DependentUpon>Control Reportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlCambiarFuncionarioAsignado.resx">
+      <DependentUpon>ControlCambiarFuncionarioAsignado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlFiltroBusqueda.resx">
+      <DependentUpon>ControlFiltroBusqueda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlMensaje.resx">
+      <DependentUpon>ControlMensaje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlMensajes.resx">
+      <DependentUpon>ControlMensajes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlUsuario.resx">
+      <DependentUpon>ControlUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Departamentos.resx">
+      <DependentUpon>Departamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empresa.resx">
+      <DependentUpon>Empresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empresas-View.resx">
+      <DependentUpon>Empresas-View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entorno.resx">
+      <DependentUpon>Entorno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBusqueda.resx">
+      <DependentUpon>FormBusqueda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioComunicacion.resx">
+      <DependentUpon>FormularioComunicacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioFiltroBusqueda.resx">
+      <DependentUpon>FormularioFiltroBusqueda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioReportes.resx">
+      <DependentUpon>FormularioReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioSeleccionDestinatarios.resx">
+      <DependentUpon>FormularioSeleccionDestinatarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUsuario.resx">
+      <DependentUpon>FormUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu-Principal.resx">
+      <DependentUpon>Menu-Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pagos.resx">
+      <DependentUpon>Pagos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaGerencial.resx">
+      <DependentUpon>PantallaGerencial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RealizarPago.resx">
+      <DependentUpon>RealizarPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Carné Empresa.rdlc" />
+    <EmbeddedResource Include="Reportes\Casos\Actividades\Actividades.rdlc" />
+    <EmbeddedResource Include="Reportes\Casos\Ficha Caso.rdlc" />
+    <EmbeddedResource Include="Reportes\Casos\ReporteCasos.rdlc" />
+    <EmbeddedResource Include="Reportes\Casos\ReporteCasosV2.rdlc" />
+    <EmbeddedResource Include="Reportes\Casos\ReporteCasosV3.rdlc" />
+    <EmbeddedResource Include="Reportes\Departamento\ReporteDepartamentosV1.rdlc" />
+    <EmbeddedResource Include="Reportes\Empresas\Empresas por Departamento.rdlc" />
+    <EmbeddedResource Include="Reportes\Empresas\Empresas por Sector.rdlc" />
+    <EmbeddedResource Include="Reportes\Empresas\Ficha Empresa.rdlc" />
+    <EmbeddedResource Include="Reportes\Recibos\Recibo.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteBase.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteCompleto\Resumen Casos por Departamento Grafico.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteCompleto\Resumen Casos por Departamento y Sector.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteCompleto\Resumen Casos por Sector Grafico.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteCompleto\Resumen Casos por Usuarios.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteEmpresa.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteEmpresas.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteEmpresaV2.rdlc" />
+    <EmbeddedResource Include="Reportes\Sector\ReporteSectoresV1.rdlc" />
+    <EmbeddedResource Include="Reportes\SolicitudApoyo\ReporteSolicitudApoyoV1.rdlc" />
+    <EmbeddedResource Include="Reportes\TipoActividad\ReporteTipoActividadV1.rdlc" />
+    <EmbeddedResource Include="Reportes\TipoEmpresa\ReporteTipoEmpresaV1.rdlc" />
+    <EmbeddedResource Include="Reportes\TipoMembresia\ReporteTipoMembresiaV1.rdlc" />
+    <EmbeddedResource Include="Reportes\TipoTarifa\ReporteTipoTarifaV1.rdlc" />
+    <EmbeddedResource Include="Reportes\Usuario\ReporteUsuariosV1.rdlc" />
+    <EmbeddedResource Include="Sectores.resx">
+      <DependentUpon>Sectores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Solicitud_Apoyo.resx">
+      <DependentUpon>Solicitud_Apoyo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TipoActividad.resx">
+      <DependentUpon>TipoActividad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tipo_Empresa.resx">
+      <DependentUpon>Tipo_Empresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tipo_Membresia.resx">
+      <DependentUpon>Tipo_Membresia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tipo_Tarifa.resx">
+      <DependentUpon>Tipo_Tarifa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsuarioPerfil.resx">
+      <DependentUpon>UsuarioPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="EmpresaDataSet.xsc">
+      <DependentUpon>EmpresaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EmpresaDataSet.xsd" />
+    <None Include="EmpresaDataSet.xss">
+      <DependentUpon>EmpresaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="ReportesDataSet.xsc">
+      <DependentUpon>ReportesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ReportesDataSet.xsd" />
+    <None Include="ReportesDataSet.xss">
+      <DependentUpon>ReportesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TablesDataSet.xsc">
+      <DependentUpon>TablesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TablesDataSet.xsd" />
+    <None Include="TablesDataSet.xss">
+      <DependentUpon>TablesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="UsuariosDataSet.xsc">
+      <DependentUpon>UsuariosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="UsuariosDataSet.xsd" />
+    <None Include="UsuariosDataSet.xss">
+      <DependentUpon>UsuariosDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-document-edit-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-document-edit-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-document-edit-icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-edit-find-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Administrative-Tools-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apps-preferences-web-browser-identification-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttachFile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BookNote.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BookNoteWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borrar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borrar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borrar48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cadin_png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cadin-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelar48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\catalog-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Charts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CheckMark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColorScheme.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\combobox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\combobox1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\company.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contact.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Details.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edtar48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\form-background.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\form-background2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formulario.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\glyphicons_256_delete_point.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guardar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guardar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guardar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guardar3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guardar48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\impirmir-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\impirmir48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\impirmir-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Invoice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invoice2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\linea.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\linea1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\linea48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO CADIN 256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarkAsPaid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarkAsPaidWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mensaje2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newFile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newFile1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewInvoice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewInvoice1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewInvoiceWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewNote.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nextEnd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nextEnd1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nextEnd48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevo48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\office-building-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OpenExistingPlace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PaperClip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PaperClipWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Person.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previous1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previous48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previousEnd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previousEnd1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previousEnd48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PrintWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\product-sales-report-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\realizarPago.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\realizarPago48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reportes48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SAS-logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Table.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Table1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TableReportt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TableSelectRow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TableWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TableWhite1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unpaid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User-blue-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UserWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UserWhite1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Web.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Reportes\Problemas\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
